@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "react-native-onekit": {
+      "signature": "5c93594fa3dae136da1a7a544d81ec49",
+      "file": true
+    }
+  }
+}
