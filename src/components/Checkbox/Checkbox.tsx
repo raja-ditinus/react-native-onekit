@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View, Text, StyleSheet, } from 'react-native';
+import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 import type { ViewStyle } from 'react-native';
 import colors from '../../theme/colors';
 
@@ -11,7 +11,13 @@ export interface CheckboxProps {
   style?: ViewStyle;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ checked, onChange, label, disabled, style }) => {
+const Checkbox: React.FC<CheckboxProps> = ({
+  checked,
+  onChange,
+  label,
+  disabled,
+  style,
+}) => {
   return (
     <TouchableOpacity
       style={[styles.row, style]}
@@ -28,7 +34,11 @@ const Checkbox: React.FC<CheckboxProps> = ({ checked, onChange, label, disabled,
       >
         {checked && <Text style={styles.checkMark}>✓</Text>}
       </View>
-      {label ? <Text style={[styles.label, disabled && styles.labelDisabled]}>{label}</Text> : null}
+      {label ? (
+        <Text style={[styles.label, disabled && styles.labelDisabled]}>
+          {label}
+        </Text>
+      ) : null}
     </TouchableOpacity>
   );
 };

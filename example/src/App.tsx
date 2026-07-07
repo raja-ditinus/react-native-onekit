@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ScrollView, View, StyleSheet } from 'react-native';
 import {
   Button,
@@ -48,7 +47,6 @@ export default function App() {
         }}
         labelStyle={{ color: '#4CAF50' }}
         focusBorderColor="#4CAF50"
-
       />
 
       <PasswordInput
@@ -106,4 +104,3 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
 });
-

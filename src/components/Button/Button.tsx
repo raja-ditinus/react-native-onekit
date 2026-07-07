@@ -5,7 +5,7 @@ import {
   ActivityIndicator,
   StyleSheet,
 } from 'react-native';
-import type{ ViewStyle, TextStyle, GestureResponderEvent } from 'react-native';
+import type { ViewStyle, TextStyle, GestureResponderEvent } from 'react-native';
 import colors from '../../theme/colors';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline';
@@ -49,7 +49,9 @@ const Button: React.FC<ButtonProps> = ({
       ]}
     >
       {loading ? (
-        <ActivityIndicator color={variant === 'outline' ? colors.primary : colors.white} />
+        <ActivityIndicator
+          color={variant === 'outline' ? colors.primary : colors.white}
+        />
       ) : (
         <Text
           style={[

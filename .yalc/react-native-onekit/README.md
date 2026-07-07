@@ -4,14 +4,11 @@ ui kit
 
 ## Installation
 
-
 ```sh
 npm install react-native-onekit
 ```
 
-
 ## Usage
-
 
 ```js
 import { multiply } from 'react-native-onekit';
@@ -20,7 +17,6 @@ import { multiply } from 'react-native-onekit';
 
 const result = multiply(3, 7);
 ```
-
 
 ## Contributing
 

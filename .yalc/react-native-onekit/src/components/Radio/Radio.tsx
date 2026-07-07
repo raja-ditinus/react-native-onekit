@@ -30,10 +30,14 @@ const RadioGroup: React.FC<RadioGroupProps> = ({
             disabled={disabled}
             onPress={() => onChange(option.value)}
           >
-            <View style={[styles.outerCircle, disabled && styles.disabledCircle]}>
+            <View
+              style={[styles.outerCircle, disabled && styles.disabledCircle]}
+            >
               {selected && <View style={styles.innerCircle} />}
             </View>
-            <Text style={[styles.label, disabled && styles.labelDisabled]}>{option.label}</Text>
+            <Text style={[styles.label, disabled && styles.labelDisabled]}>
+              {option.label}
+            </Text>
           </TouchableOpacity>
         );
       })}

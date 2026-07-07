@@ -1,16 +1,7 @@
 import React, { useState, forwardRef } from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  StyleSheet,
-} from 'react-native';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 
-import type {
-  TextInputProps,
-  TextStyle,
-  ViewStyle,
-} from 'react-native';
+import type { TextInputProps, TextStyle, ViewStyle } from 'react-native';
 import colors from '../../theme/colors';
 
 export interface InputProps extends TextInputProps {
@@ -25,11 +16,8 @@ export interface InputProps extends TextInputProps {
   rightElement?: React.ReactNode;
   focusBorderColor?: string;
 }
-
-const Input = forwardRef<
-  React.ComponentRef<typeof TextInput>,
-  InputProps
->(
+type InputRef = React.ComponentRef<typeof TextInput>;
+const Input = forwardRef<InputRef, InputProps>(
   (
     {
       label,

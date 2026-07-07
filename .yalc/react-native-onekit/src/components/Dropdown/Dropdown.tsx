@@ -9,7 +9,7 @@ import {
   type ViewStyle,
 } from 'react-native';
 import colors from '../../theme/colors';
-import type{ DropdownOption } from '../types';
+import type { DropdownOption } from '../types';
 
 export interface DropdownProps {
   label?: string;
@@ -57,7 +57,12 @@ const Dropdown: React.FC<DropdownProps> = ({
 
       {error ? <Text style={styles.errorText}>{error}</Text> : null}
 
-      <Modal visible={open} transparent animationType="fade" onRequestClose={() => setOpen(false)}>
+      <Modal
+        visible={open}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setOpen(false)}
+      >
         <TouchableOpacity
           style={styles.backdrop}
           activeOpacity={1}
